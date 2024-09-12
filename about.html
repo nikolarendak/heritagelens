@@ -16,6 +16,10 @@
             min-height: 100vh;
             background: linear-gradient(to bottom, #636262, #333333); 
         }
+        
+        .spacer {
+    margin-top: 70px; 
+}
 
         header {
             background-color: #333333; 
@@ -40,6 +44,7 @@
             margin-left: 20px; 
             margin-top: 50px; 
             display: flex;
+            flex-wrap: wrap; 
         }
 
         nav a {
@@ -55,24 +60,15 @@
             color: #FFA500; 
         }
 
-        nav a::after {
-            height: 80px; 
-            transition: transform 1.0s ease-in-out; 
-        }
-
-        nav a:hover::after {
-            transform: scaleX(1);
-        }
-
         main {
             padding: 20px;
             flex: 1; 
-            max-width: 800px;
-            text-align: left; 
-            margin-left: 20px; 
+            max-width: 1000px;
+            text-align: center; 
+            margin: 0 auto; 
         }
 
-        h1 {
+        h1, h2 {
             color: #FFA500;
             animation: fadeIn 3s ease-in-out; 
         }
@@ -82,17 +78,27 @@
             margin-bottom: 20px;
         }
 
+        .advisors {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            gap: 20px; 
+        }
+
         .team-member {
             display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             margin-bottom: 20px;
+            flex: 1 1 200px; 
         }
 
         .team-member img {
             height: 100px; 
             width: 100px; 
             border-radius: 50%; 
-            margin-right: 15px; 
+            margin-bottom: 10px; 
         }
 
         .team-member p {
@@ -115,9 +121,15 @@
             to { opacity: 1; }
         }
 
-        @keyframes slideIn {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+        @media (max-width: 768px) {
+            .advisors {
+                justify-content: center; 
+            }
+
+            .team-member {
+                flex: 1 1 100%; 
+                margin-bottom: 20px; 
+            }
         }
 
     </style>
@@ -129,30 +141,39 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
-            <a href="rfp.html">Request for Proposal</a>
+            <a href="rfp.html">Active Efforts</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        <h1>About Us</h1>
-        <p class="intro">
-            At Heritage Lens Alliance, we are guided by a team of distinguished advisors from renowned institutions around the globe. Their expertise and insights help shape our vision and drive our efforts to preserve and advance historical archives for future generations. Meet our esteemed advisors:
-        </p>
-        <div class="team-member">
-            <img src="edith_sandler.png" alt="Edith Sandler">
-            <p><strong>Edith Sandler</strong>, Library of Congress</p>
-        </div>
-        <div class="team-member">
-            <img src="wilhelm_widmark.png" alt="Wilhelm Widmark">
-            <p><strong>Wilhelm Widmark</strong>, Stockholm University Library</p>
-        </div>
-        <div class="team-member">
-            <img src="ellie_steers.png" alt="Ellie Steers">
-            <p><strong>Ellie Steers</strong>, The British Library</p>
-        </div>
-        <div class="team-member">
-            <img src="melanie_seifert.png" alt="Melanie Seifert">
-            <p><strong>Melanie Seifert</strong>, Kodak Alaris</p>
+        <h1>About Heritage Lens Alliance</h1>
+    <p class="intro">
+        The Heritage Lens Alliance is a groundbreaking initiative dedicated to preserving and enhancing access to the world's most treasured historical archives. By collaborating with leading institutions, libraries, and experts in the field, we strive to leverage the latest technologies—such as machine learning and digital preservation tools—to digitize and catalog rare collections, manuscripts, and cultural heritage materials. Our mission is to make these invaluable resources accessible to researchers, educators, and the general public worldwide, ensuring that the knowledge and stories of our shared past are not lost but instead continue to inspire future generations.
+    </p>
+    <p class="intro">
+        Through our efforts, we aim to address the unique challenges posed by deteriorating materials, obsolete formats, and limited access to physical archives. We work closely with international partners, including national libraries, research institutions, and technology companies, to develop innovative solutions for long-term digital preservation and archival access. Our projects are designed not only to safeguard historical records but also to foster a deeper appreciation of our global cultural heritage by bringing these resources into the digital age.
+    </p>
+    
+    <div class="spacer"></div>
+
+        <h2>Our Advisors</h2>
+        <div class="advisors">
+            <div class="team-member">
+                <img src="edith_sandler.png" alt="Edith Sandler">
+                <p><strong>Edith Sandler</strong>, Library of Congress</p>
+            </div>
+            <div class="team-member">
+                <img src="wilhelm_widmark.png" alt="Wilhelm Widmark">
+                <p><strong>Wilhelm Widmark</strong>, Stockholm University Library</p>
+            </div>
+            <div class="team-member">
+                <img src="ellie_steers.png" alt="Ellie Steers">
+                <p><strong>Ellie Steers</strong>, The British Library</p>
+            </div>
+            <div class="team-member">
+                <img src="melanie_seifert.png" alt="Melanie Seifert">
+                <p><strong>Melanie Seifert</strong>, Kodak Alaris</p>
+            </div>
         </div>
     </main>
     <footer>
