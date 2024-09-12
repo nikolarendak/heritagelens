@@ -106,6 +106,64 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack header elements vertically */
+                text-align: center;
+            }
+
+            header img {
+                height: 50px; /* Reduce logo size on small screens */
+            }
+
+            nav {
+                flex-direction: column; /* Stack nav items vertically */
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin: 5px 0; /* Add space between vertical nav items */
+                font-size: 1rem; /* Ensure the font size is readable on small screens */
+            }
+
+            main {
+                padding: 15px;
+                max-width: 90%; /* Make main content occupy more width on small screens */
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Adjust heading sizes for readability */
+            }
+
+            .contact-info h2 {
+                font-size: 1.25rem;
+            }
+
+            p {
+                font-size: 1rem; /* Adjust paragraph font size for readability */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem; /* Further adjust font size for very small screens */
+            }
+
+            .contact-info h2 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.9rem; /* Adjust font size for readability on very small screens */
+            }
+
+            nav a {
+                font-size: 0.9rem; /* Adjust nav item font size for very small screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,8 +186,6 @@
             <p>For general inquiries, please contact us at: <a href="mailto:info@heritagelens.net" style="color: #FFFFFF;">info@heritagelens.net</a></p>
             <p>If you are interested in partnership opportunities or have specific project proposals, reach out to: <a href="mailto:partnerships@heritagelens.net" style="color: #FFFFFF;">partnerships@heritagelens.net</a></p>
 
-            <h2>Follow Us</h2>
-            <p>Stay connected and follow our updates on social media for the latest news and insights on our projects.</p>
         </div>
     </main>
     <footer>

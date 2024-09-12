@@ -55,15 +55,6 @@
             color: #FFA500; 
         }
 
-        nav a::after {
-            height: 80px; 
-            transition: transform 1.0s ease-in-out; 
-        }
-
-        nav a:hover::after {
-            transform: scaleX(1);
-        }
-
         main {
             padding: 20px;
             flex: 1; 
@@ -72,14 +63,12 @@
             text-align: center; 
         }
 
-        h1 {
+        h1, h2 {
             color: #FFA500;
-            animation: fadeIn 3s ease-in-out; 
+            margin-top: 20px;
         }
 
         h2 {
-            color: #FFA500;
-            margin-top: 20px;
             border-bottom: 2px solid #FFA500; 
             padding-bottom: 5px;
             animation: slideIn 0.5s ease-out; 
@@ -91,9 +80,9 @@
         }
 
         ul {
-            list-style-type: none; /* Remove bullet points from unordered lists */
+            list-style-type: none; 
             margin-left: 20px;
-            padding-left: 0; /* Adjust padding for better alignment */
+            padding-left: 0; 
         }
 
         footer {
@@ -114,6 +103,60 @@
         @keyframes slideIn {
             from { transform: translateX(-100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; 
+                text-align: center;
+            }
+
+            header img {
+                height: 50px; 
+            }
+
+            nav {
+                flex-direction: column; 
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin: 5px 0; 
+                font-size: 1rem; 
+            }
+
+            main {
+                padding: 15px;
+                max-width: 90%; 
+            }
+
+            h1 {
+                font-size: 1.5rem; 
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem; 
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            p, ul {
+                font-size: 0.9rem; 
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
