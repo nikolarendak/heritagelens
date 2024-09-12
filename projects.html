@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Lens Alliance - Projects</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #dddddd;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #636262, #333333); 
+        }
+
+        header {
+            background-color: #333333; 
+            padding: 10px 20px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center; 
+            position: relative;
+            z-index: 1000;
+        }
+
+        header img {
+            height: 80px; 
+            transition: transform 1.0s ease-in-out; 
+        }
+
+        header img:hover {
+            transform: scale(1.1); 
+        }
+
+        nav {
+            margin-left: 20px; 
+            margin-top: 50px; 
+            display: flex;
+        }
+
+        nav a {
+            color: #FFFFFF; 
+            text-decoration: none;
+            margin: 0 10px; 
+            font-weight: bold;
+            position: relative;
+            display: inline-block; 
+        }
+
+        nav a:hover {
+            color: #FFA500; 
+        }
+
+        nav a::after {
+            height: 80px; 
+            transition: transform 1.0s ease-in-out; 
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        main {
+            padding: 20px;
+            flex: 1; 
+            max-width: 800px;
+            text-align: left; 
+            margin-left: 20px; 
+        }
+
+        h1 {
+            color: #FFA500;
+            animation: fadeIn 3s ease-in-out; 
+        }
+
+        h2 {
+            color: #FFA500;
+            margin-top: 20px;
+            border-bottom: 2px solid #FFA500; 
+            padding-bottom: 5px;
+            animation: slideIn 0.5s ease-out; 
+        }
+
+        p, ul {
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="heritagelenslogo.png" alt="Heritage Lens Alliance Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="rfp.html">Request for Proposal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Microfilm Digitization Project</h1>
+        <h2>Advanced ML Processing for Damaged Archives</h2>
+        <h3>Project Background</h3>
+        <p>
+            Our organization is a joint effort funded by Kodak Alaris, the US National Archives and Records Administration (NARA), The British Library, and the National Library of Australia to provide a specialized program for microfilm digitization. 
+            This initiative focuses particularly on damaged microfilm, aiming to recover, process, and extract valuable information from these fragile historical records.
+        </p>
+        <h3>Project Objectives</h3>
+        <ul>
+            <li>Digitize damaged microfilm from partner institutions</li>
+            <li>Apply advanced Machine Learning (ML) models to:
+                <ul>
+                    <li>Enhance and restore image quality</li>
+                    <li>Recognize and extract text (from OCR)</li>
+                    <li>Identify and classify document types</li>
+                    <li>Extract contextual information and metadata</li>
+                    <li>Detect and flag sensitive or confidential information</li>
+                    <li>Create searchable, indexed digital archives with reference to original microfilm and raw scan</li>
+                    <li>Ensure compliance with archival standards and data protection regulations</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Supplier Partnership Opportunity</h3>
+        <p>
+            We are seeking partnerships with suppliers who can provide cutting-edge ML models and image processing capabilities. Ideal partners will offer:
+        </p>
+        <ul>
+            <li>Out-of-the-box solutions for common tasks (e.g., OCR, image enhancement)</li>
+            <li>Customizable models for specialized requirements</li>
+            <li>Scalable processing capabilities to handle large volumes of data</li>
+            <li>Expertise in handling historical documents and damaged media</li>
+        </ul>
+        <h3>Next Steps</h3>
+        <p>
+            Review the accompanying documents:
+        </p>
+        <ul>
+            <li>Technical Requirements Specification</li>
+            <li>Supplier Technical Capabilities Questionnaire</li>
+        </ul>
+        <p>
+            Complete the Supplier Capabilities Questionnaire and prepare any additional information about your relevant products or services. Submit your completed questionnaire and supplementary materials to [contact details].
+        </p>
+        <p>
+            We look forward to exploring potential partnerships to bring this crucial historical preservation project to fruition.
+        </p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Heritage Lens Alliance. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heritage Lens Alliance - Request for Proposal</title>
+    <title>Heritage Lens Alliance - About</title>
     <style>
         /* Global Styles */
         body {
@@ -14,15 +14,15 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: linear-gradient(to bottom, #636262, #333333);
+            background: linear-gradient(to bottom, #636262, #333333); 
         }
 
         header {
-            background-color: #333333;
+            background-color: #333333; 
             padding: 10px 20px;
-            color: #FFFFFF; 
+            color: #FFFFFF;
             display: flex;
-            align-items: center;
+            align-items: center; 
             position: relative;
             z-index: 1000;
         }
@@ -47,18 +47,29 @@
             text-decoration: none;
             margin: 0 10px; 
             font-weight: bold;
+            position: relative;
+            display: inline-block; 
         }
 
         nav a:hover {
-            color: #FFA500;
+            color: #FFA500; 
+        }
+
+        nav a::after {
+            height: 80px; 
+            transition: transform 1.0s ease-in-out; 
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
         }
 
         main {
             padding: 20px;
-            flex: 1;
+            flex: 1; 
             max-width: 800px;
-            margin-left: 20px;
             text-align: left; 
+            margin-left: 20px; 
         }
 
         h1 {
@@ -66,22 +77,27 @@
             animation: fadeIn 3s ease-in-out; 
         }
 
-        h2 {
-            color: #FFA500;
-            margin-top: 20px;
-            border-bottom: 2px solid #FFA500;
-            padding-bottom: 5px;
-            animation: slideIn 0.5s ease-out;
-        }
-
-        p {
+        .intro {
             color: #FFFFFF;
+            margin-bottom: 20px;
         }
 
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            animation: fadeIn 2s ease-in-out;
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .team-member img {
+            height: 100px; 
+            width: 100px; 
+            border-radius: 50%; 
+            margin-right: 15px; 
+        }
+
+        .team-member p {
+            color: #FFFFFF;
+            margin: 0;
         }
 
         footer {
@@ -94,21 +110,6 @@
             width: 100%;
         }
 
-        a.button {
-            display: inline-block;
-            padding: 10px 20px;
-            color: #FFFFFF;
-            background-color: #FFA500;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        a.button:hover {
-            background-color: #FF8C00; 
-        }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -118,6 +119,7 @@
             from { transform: translateX(-100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
+
     </style>
 </head>
 <body>
@@ -132,10 +134,26 @@
         </nav>
     </header>
     <main>
-        <h1>Request for Proposal</h1>
-        <h2>Microfilm Digitization Project</h2>
-        <p>We are seeking proposals from qualified vendors for the digitization of damaged microfilm archives using advanced machine learning processing techniques. To participate in this opportunity, please download the required documents below and provide detailed responses to the questions provided.</p>
-        <a href="svty2ilaptgfaewjcga0ckej8.docm" class="button">Download Document</a>
+        <h1>About Us</h1>
+        <p class="intro">
+            At Heritage Lens Alliance, we are guided by a team of distinguished advisors from renowned institutions around the globe. Their expertise and insights help shape our vision and drive our efforts to preserve and advance historical archives for future generations. Meet our esteemed advisors:
+        </p>
+        <div class="team-member">
+            <img src="edith_sandler.png" alt="Edith Sandler">
+            <p><strong>Edith Sandler</strong>, Library of Congress</p>
+        </div>
+        <div class="team-member">
+            <img src="wilhelm_widmark.png" alt="Wilhelm Widmark">
+            <p><strong>Wilhelm Widmark</strong>, Stockholm University Library</p>
+        </div>
+        <div class="team-member">
+            <img src="ellie_steers.png" alt="Ellie Steers">
+            <p><strong>Ellie Steers</strong>, The British Library</p>
+        </div>
+        <div class="team-member">
+            <img src="melanie_seifert.png" alt="Melanie Seifert">
+            <p><strong>Melanie Seifert</strong>, Kodak Alaris</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Heritage Lens Alliance. All rights reserved.</p>
