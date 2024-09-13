@@ -111,68 +111,56 @@
             background-color: #FF8C00; 
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+         /* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
 
-        @keyframes slideIn {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
+    header img {
+        height: 50px; 
+    }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column; 
-                align-items: flex-start; 
-                text-align: center;
-            }
+    nav {
+        flex-direction: row; 
+        align-items: baseline; 
+        margin-top: 10px; 
+    }
 
-            nav {
-                margin-left: 0;
-                margin-top: 10px; 
-            }
+    nav a {
+        margin: 3px 1; 
+        font-size: 1em; 
+    }
 
-            nav a {
-                margin: 5px 0; 
-            }
+    .hero {
+        padding: 60px 10px; 
+    }
 
-            main {
-                padding: 10px;
-            }
+    .hero h1 {
+        font-size: 2em; 
+    }
 
-            h1 {
-                font-size: 1.5em; 
-            }
+    .hero p {
+        font-size: 1em; 
+    }
 
-            h2 {
-                font-size: 1.2em;
-            }
+    main {
+        padding: 10px; 
+        margin: 0 auto; 
+        max-width: 100%; 
+    }
 
-            p, ul {
-                font-size: 0.9em; 
-            }
-        }
+    .projects, .testimonials, .events {
+        margin-top: 20px; 
+    }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.2em;
-            }
-
-            h2 {
-                font-size: 1em; 
-            }
-
-            p, ul {
-                font-size: 0.8em; 
-            }
-
-            a.button {
-                padding: 8px 16px; 
-                font-size: 0.9em; 
-            }
-        }
+    .hero button {
+        font-size: 0.9em; 
+        padding: 8px 16px; 
+    }
+}
     </style>
 </head>
 <body>

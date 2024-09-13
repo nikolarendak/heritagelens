@@ -102,68 +102,56 @@
             width: 100%;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+         /* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
 
-        /* Media Query for Small Screens */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column; /* Stack header elements vertically */
-                text-align: center;
-            }
+    header img {
+        height: 50px; 
+    }
 
-            header img {
-                height: 50px; /* Reduce logo size on small screens */
-            }
+    nav {
+        flex-direction: row; 
+        align-items: baseline; 
+        margin-top: 10px; 
+    }
 
-            nav {
-                flex-direction: column; /* Stack nav items vertically */
-                margin-left: 0;
-                margin-top: 10px;
-            }
+    nav a {
+        margin: 3px 1; 
+        font-size: 1em; 
+    }
 
-            nav a {
-                margin: 5px 0; /* Add space between vertical nav items */
-                font-size: 1rem; /* Ensure the font size is readable on small screens */
-            }
+    .hero {
+        padding: 60px 10px; 
+    }
 
-            main {
-                padding: 15px;
-                max-width: 90%; /* Make main content occupy more width on small screens */
-            }
+    .hero h1 {
+        font-size: 2em; 
+    }
 
-            h1 {
-                font-size: 1.5rem; /* Adjust heading sizes for readability */
-            }
+    .hero p {
+        font-size: 1em; 
+    }
 
-            .contact-info h2 {
-                font-size: 1.25rem;
-            }
+    main {
+        padding: 10px; 
+        margin: 0 auto; 
+        max-width: 100%; 
+    }
 
-            p {
-                font-size: 1rem; /* Adjust paragraph font size for readability */
-            }
-        }
+    .projects, .testimonials, .events {
+        margin-top: 20px; 
+    }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.2rem; /* Further adjust font size for very small screens */
-            }
-
-            .contact-info h2 {
-                font-size: 1rem;
-            }
-
-            p {
-                font-size: 0.9rem; /* Adjust font size for readability on very small screens */
-            }
-
-            nav a {
-                font-size: 0.9rem; /* Adjust nav item font size for very small screens */
-            }
-        }
+    .hero button {
+        font-size: 0.9em; 
+        padding: 8px 16px; 
+    }
+}
     </style>
 </head>
 <body>
